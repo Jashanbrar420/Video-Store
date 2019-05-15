@@ -1,0 +1,145 @@
+﻿<Window x:Class="Video_Store.Main"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Video_Store"
+        mc:Ignorable="d"
+        Title="Main" Height="609.2" Width="1064">
+    <Grid Margin="0,0,-1,-5" Background="#FF68FFBA" RenderTransformOrigin="0.5,0.5">
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="0.22"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="359*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="107*"/>
+            <RowDefinition Height="105*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="294*"/>
+            <ColumnDefinition Width="63*"/>
+            <ColumnDefinition Width="78"/>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="394*"/>
+            <ColumnDefinition Width="191*"/>
+        </Grid.ColumnDefinitions>
+        <TabControl HorizontalAlignment="Left" Height="556" Margin="19,9,0,0" VerticalAlignment="Top" Width="452" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="4"  Grid.RowSpan="4" >
+            <TabControl.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.132"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TabControl.RenderTransform>
+            <TabItem Header="Customer" Loaded="Customer_load">
+                <Grid Margin="0,0,0,-237">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="89*"/>
+                        <ColumnDefinition Width="80*"/>
+                        <ColumnDefinition Width="106*"/>
+                        <ColumnDefinition Width="110*"/>
+                        <ColumnDefinition Width="171*"/>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid x:Name="Custdata"   CanUserAddRows="False" CanUserSortColumns="True" Background="Beige" AlternatingRowBackground="Azure" RowBackground="Beige"  HeadersVisibility="Column"   CanUserResizeColumns="True" AutoGenerateColumns="True" HorizontalAlignment="Left" Height="525" VerticalAlignment="Top" Width="446" Grid.ColumnSpan="5" MouseDoubleClick="Select" />
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Video" Height="22" VerticalAlignment="Top" Loaded="Video_loaded">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="18*"/>
+                        <ColumnDefinition Width="46*"/>
+                        <ColumnDefinition Width="43*"/>
+                        <ColumnDefinition Width="26*"/>
+                        <ColumnDefinition Width="18*"/>
+                        <ColumnDefinition Width="75*"/>
+                        <ColumnDefinition Width="72*"/>
+                        <ColumnDefinition Width="148*"/>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid x:Name="Moviedata"   CanUserAddRows="False" CanUserSortColumns="True" Background="Beige" AlternatingRowBackground="Azure" RowBackground="Beige"  HeadersVisibility="Column"   CanUserResizeColumns="True" AutoGenerateColumns="True" HorizontalAlignment="Left" Height="515" VerticalAlignment="Top" Width="441" Grid.ColumnSpan="8" MouseDoubleClick="Movie_Edit" Margin="5,0,0,0"/>
+
+                </Grid>
+            </TabItem >
+            <TabItem Header="Rental" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="68" Margin="-2,0,0,-1" Loaded="MovieLoad">
+
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30*"/>
+                        <ColumnDefinition Width="8"/>
+                        <ColumnDefinition Width="94*"/>
+                        <ColumnDefinition Width="99*"/>
+                        <ColumnDefinition Width="117*"/>
+                        <ColumnDefinition Width="208*"/>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid x:Name="Rentdata"   CanUserAddRows="False" CanUserSortColumns="True" Background="Beige" AlternatingRowBackground="Azure" RowBackground="Beige"  HeadersVisibility="Column"   CanUserResizeColumns="True" AutoGenerateColumns="True" HorizontalAlignment="Left" Height="525" VerticalAlignment="Top" Width="446" Grid.ColumnSpan="6" MouseDoubleClick="Rented" SelectionChanged="Rental_data_SelectionChanged" Loaded="Rent"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <Label Content="First Name" HorizontalAlignment="Left" Margin="0,70,0,0" VerticalAlignment="Top" Height="26" Width="67" Grid.Column="4"/>
+        <Label Content="Phone" HorizontalAlignment="Left" Margin="195,128,0,0" VerticalAlignment="Top" Width="51" RenderTransformOrigin="0.31,1.652" Height="26" Grid.Column="4">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.366"/>
+                    <TranslateTransform X="0.189" Y="0.06"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label Content="Last Name" HorizontalAlignment="Left" Margin="179,70,0,0" VerticalAlignment="Top" Height="26" Width="74" Grid.Column="4"/>
+        <Label Content="Address" HorizontalAlignment="Left" Margin="14,124,0,0" VerticalAlignment="Top" Height="26" Width="53" Grid.Column="4"/>
+        <TextBox x:Name="Firstnametext" HorizontalAlignment="Left" Height="23" Margin="81,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="84" Grid.Column="4"/>
+        <TextBox x:Name="lastnametext" HorizontalAlignment="Left" Height="23" Margin="247,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="98" Grid.Column="4"/>
+        <TextBox x:Name="Addresstext" HorizontalAlignment="Left" Height="26" Margin="81,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="84" Grid.Column="4"/>
+        <TextBox x:Name="Phonetext" HorizontalAlignment="Left" Height="23" Margin="245,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Grid.Column="4"/>
+        <Button x:Name="custadd_btn" Content="Add" HorizontalAlignment="Left" Margin="0,165,0,0" VerticalAlignment="Top" Width="91" Click="cust_Add_Click" Height="26" Grid.Column="4"/>
+        <Button x:Name="custupdatebtn" Content="Update" Margin="118,165,192,0" VerticalAlignment="Top" Click="Update_Click" Height="26" Grid.Column="4"/>
+        <Button x:Name="custdeletebtn" Content="Delete" HorizontalAlignment="Left" Margin="245,165,0,0" VerticalAlignment="Top" Width="98" IsCancel="True" Click="CustDelClick" Height="26" Grid.Column="4"/>
+        <Label Content="Movie" Grid.Column="4" Margin="0,353,353,0" VerticalAlignment="Top" Height="26" Grid.RowSpan="3"/>
+        <Label Content="Date Issued" Grid.Column="3" HorizontalAlignment="Left" Margin="37,36,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.053,0.346" Height="26" Width="72" Grid.ColumnSpan="2" Grid.Row="2"/>
+        <Label Content="Coustomer" Grid.Column="4" HorizontalAlignment="Left" Margin="169,353,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1,-0.231" Height="26" Width="68" Grid.RowSpan="3"/>
+        <Label Content="Date Returned" Grid.Column="4" HorizontalAlignment="Left" Margin="169,28,0,0" VerticalAlignment="Top" Height="26" Width="86" Grid.Row="2"/>
+        <TextBox x:Name="Movieidtext" Grid.Column="4" HorizontalAlignment="Left" Height="23" Margin="74,353,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" TextChanged="Movieid_txt_TextChanged" Grid.RowSpan="3"/>
+        <TextBox x:Name="dateissuetext" Grid.Column="4" HorizontalAlignment="Left" Height="23" Margin="74,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Grid.Row="2"/>
+        <TextBox x:Name="dateretunedtext" Grid.Column="4" HorizontalAlignment="Left" Height="23" Margin="260,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Grid.Row="2"/>
+        <TextBox x:Name="coustomeidtext" Grid.Column="4" HorizontalAlignment="Left" Height="23" Margin="255,348,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" RenderTransformOrigin="0.705,0.435" TextChanged="Movieid_txt_Copy2_TextChanged" Grid.RowSpan="2"/>
+        <Button x:Name="Issue_Movie" Content="Issue Movie" Grid.Column="4" HorizontalAlignment="Left" Margin="167,82,0,0" VerticalAlignment="Top" Width="120" Height="40" Click="Borrowed_Click" Grid.Row="2" Grid.RowSpan="2"/>
+        <Label Content="RMID" Grid.Column="4" HorizontalAlignment="Left" Margin="147,277,0,0" VerticalAlignment="Top" Height="26" Width="40"/>
+        <TextBox x:Name="rmidtext" Grid.Column="4" HorizontalAlignment="Left" Height="23" Margin="128,308,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="89"/>
+        <Button x:Name="Returnbtn" Content="Return" Grid.Column="4" HorizontalAlignment="Left" Margin="26,81,0,0" VerticalAlignment="Top" Width="103" Click="ReturnBack_Click" Height="39" RenderTransformOrigin="0.5,0.5" Grid.Row="2" Grid.RowSpan="2">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.766"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Label Content="Title" HorizontalAlignment="Left" Margin="47,127,0,0" VerticalAlignment="Top" Background="#00000000" Height="26" Width="32" Grid.Column="5"/>
+        <Label Content="Rating" HorizontalAlignment="Left" Margin="45,333,0,0" VerticalAlignment="Top" Height="26" Width="44" RenderTransformOrigin="4.532,-0.432" Grid.Column="5"/>
+        <Label Content="Plot" HorizontalAlignment="Left" Margin="48,200,0,0" VerticalAlignment="Top" Height="26" Width="31" Grid.Column="5"/>
+        <Label Content="Year" HorizontalAlignment="Left" Margin="57,49,0,0" VerticalAlignment="Top" Height="26" Width="32" Grid.Row="2" Grid.Column="5"/>
+        <TextBox x:Name="Titletext" HorizontalAlignment="Left" Height="23" Margin="10,163,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="5"/>
+        <TextBox x:Name="Ratingtext" HorizontalAlignment="Left" Height="23" Margin="10,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.483,0.174" Grid.Column="5" Grid.Row="2"/>
+        <TextBox x:Name="Plottext" HorizontalAlignment="Left" Height="23" Margin="10,231,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="5"/>
+        <TextBox x:Name="Yeartext" HorizontalAlignment="Left" Height="23" Margin="10,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="1.312,11.238" Grid.Column="5" Grid.Row="2"/>
+        <Label Content="Genre" HorizontalAlignment="Left" Margin="47,264,0,0" VerticalAlignment="Top" Height="26" Width="42" Grid.Column="5"/>
+        <TextBox x:Name="Genretext" HorizontalAlignment="Left" Height="23" Margin="10,295,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="5"/>
+        <Button x:Name="movieaddbtn" Content="Add" HorizontalAlignment="Left" Margin="322,41.357,0,0" VerticalAlignment="Top" Width="78" Click="AddMovies_Click" Height="42" Grid.Column="4" Grid.Row="3"/>
+        <Button x:Name="movieupdatebtn" Content="Update" HorizontalAlignment="Left" Margin="405,41.357,0,0" VerticalAlignment="Top" Width="71" Click="UpdateMovies_Click" Height="42" Grid.Column="4" Grid.Row="3" Grid.ColumnSpan="2"/>
+        <Button x:Name="moviedeletbtn" Content="Delete" HorizontalAlignment="Left" Margin="112,41,0,0" VerticalAlignment="Top" Width="68" IsCancel="True" Click="DeleteMovie" Height="42" Grid.Column="5" Grid.Row="3" RenderTransformOrigin="-1.435,1.019"/>
+        <Label Content="Copies" HorizontalAlignment="Left" Margin="38,52,0,0" VerticalAlignment="Top" Height="26" Width="46" RenderTransformOrigin="0.142,0.505" Grid.Column="5"/>
+        <TextBox x:Name="copiestext" HorizontalAlignment="Left" Height="23" Margin="10,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="2.852,8.412" Grid.Column="5"/>
+        <Label Content="movie" HorizontalAlignment="Left" Margin="38,10,0,304" Background="#00000000" Width="68" FontSize="20" Grid.Column="5"/>
+        <Label Content="Customer" HorizontalAlignment="Left" Margin="159,10,0,304" Background="#00000000" Width="108" FontSize="20" Grid.Column="4"/>
+
+    </Grid>
+</Window>
