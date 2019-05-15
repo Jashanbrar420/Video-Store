@@ -12,7 +12,7 @@ namespace Video_Store
 {
     class Rent
     {
-        SqlConnection ConnRent = new SqlConnection("Data Source=GILL-PC;Initial Catalog=VSR_System;Integrated Security=True");
+        SqlConnection ConnRent = new SqlConnection("Data Source=LAPTOP-9A6RU4RG;Initial Catalog=VSR_System;Integrated Security=True");
 
         SqlCommand CMDrent = new SqlCommand();
 
@@ -140,7 +140,7 @@ namespace Video_Store
         }
 
 
-        public void issue(int MovieIDFK, int CustIDFK, DateTime DateRented, int copies, int isout)
+        public void issue(int MovieIDFK, int CustIDFK, DateTime DateRented)
         {
             try
             {
@@ -149,13 +149,11 @@ namespace Video_Store
 
 
 
-                money = "Insert into RentedMovies(MovieIDFK, CustIDFK, DateRented ,isout) Values( @MovieIDFk, @CustIDFK, @DateRented, @isout)";
+                money = "Insert into RentedMovies(MovieIDFK, CustIDFK, DateRented ) Values( @MovieIDFk, @CustIDFK, @DateRented)";
 
                 CMDrent.Parameters.AddWithValue("@MovieIDFK", MovieIDFK);
                 CMDrent.Parameters.AddWithValue("@CustIDFK", CustIDFK);
                 CMDrent.Parameters.AddWithValue("@DateRented", DateRented);
-                CMDrent.Parameters.AddWithValue("@isout", isout);
-                CMDrent.Parameters.AddWithValue("@copies", copies);
 
 
                 CMDrent.CommandText = money;

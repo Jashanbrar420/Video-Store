@@ -26,7 +26,6 @@ namespace Video_Store
         
 
         
-        private object dialogResult;
 
         public Main()
         {
@@ -118,7 +117,7 @@ namespace Video_Store
                 int Year = Convert.ToInt32(Yeartext.Text);
                 int cp = Convert.ToInt32(copiestext.Text);
                 string Money;
-                if (2018 - Year > 5)
+                if (2019 - Year > 5)
                 {
                     Money = "2";
                         
@@ -210,11 +209,10 @@ namespace Video_Store
                 int Customerid = Convert.ToInt32(coustomeidtext.Text);
                 dateissuetext.Text = DateTime.Today.ToString("dd-MM-yyyy");
                 int copies = Convert.ToInt32(copiestext.Text);
-                int Rented = 1;
 
 
 
-                RentObj.issue(MovieID, Customerid, DateTime.Now, copies, Rented);
+                RentObj.issue(MovieID, Customerid, DateTime.Now);
                 Moviedata.ItemsSource = VideoObj.VideosLoad().DefaultView;
                 Rentdata.ItemsSource = RentObj.ListRented().DefaultView;
                 Custdata.ItemsSource = RentObj.Loadcustomer().DefaultView;

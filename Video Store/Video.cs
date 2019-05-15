@@ -12,7 +12,7 @@ namespace Video_Store
 {
     class Video
     {
-        SqlConnection ConnVideo = new SqlConnection("Data Source=GILL-PC;Initial Catalog=VSR_System;Integrated Security=True");
+        SqlConnection ConnVideo = new SqlConnection("Data Source=LAPTOP-9A6RU4RG;Initial Catalog=VSR_System;Integrated Security=True");
 
         SqlCommand CmdVideo = new SqlCommand();
 

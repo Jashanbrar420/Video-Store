@@ -70,3 +70,18 @@ C:\Users\sunny\Desktop\video-master\Video Store\obj\Debug\Video Store.g.resource
 C:\Users\sunny\Desktop\video-master\Video Store\obj\Debug\Video_Store.Properties.Resources.resources
 C:\Users\sunny\Desktop\video-master\Video Store\obj\Debug\Video Store.csproj.GenerateResource.cache
 C:\Users\sunny\Desktop\video-master\Video Store\obj\Debug\Video Store.csproj.CoreCompileInputs.cache
+C:\Users\brarj\OneDrive\Desktop\Video-Store\Video Store\bin\Debug\Video Store.exe.config
+C:\Users\brarj\OneDrive\Desktop\Video-Store\Video Store\bin\Debug\Video Store.exe
+C:\Users\brarj\OneDrive\Desktop\Video-Store\Video Store\bin\Debug\Video Store.pdb
+C:\Users\brarj\OneDrive\Desktop\Video-Store\Video Store\obj\Debug\Video Store.csprojAssemblyReference.cache
+C:\Users\brarj\OneDrive\Desktop\Video-Store\Video Store\obj\Debug\Main.g.cs
+C:\Users\brarj\OneDrive\Desktop\Video-Store\Video Store\obj\Debug\App.g.cs
+C:\Users\brarj\OneDrive\Desktop\Video-Store\Video Store\obj\Debug\Video Store_MarkupCompile.cache
+C:\Users\brarj\OneDrive\Desktop\Video-Store\Video Store\obj\Debug\Video Store_MarkupCompile.lref
+C:\Users\brarj\OneDrive\Desktop\Video-Store\Video Store\obj\Debug\Main.baml
+C:\Users\brarj\OneDrive\Desktop\Video-Store\Video Store\obj\Debug\Video Store.g.resources
+C:\Users\brarj\OneDrive\Desktop\Video-Store\Video Store\obj\Debug\Video_Store.Properties.Resources.resources
+C:\Users\brarj\OneDrive\Desktop\Video-Store\Video Store\obj\Debug\Video Store.csproj.GenerateResource.cache
+C:\Users\brarj\OneDrive\Desktop\Video-Store\Video Store\obj\Debug\Video Store.csproj.CoreCompileInputs.cache
+C:\Users\brarj\OneDrive\Desktop\Video-Store\Video Store\obj\Debug\Video Store.exe
+C:\Users\brarj\OneDrive\Desktop\Video-Store\Video Store\obj\Debug\Video Store.pdb
